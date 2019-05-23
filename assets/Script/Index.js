@@ -12,6 +12,7 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+
         // foo: {
         //     // ATTRIBUTES:
         //     default: null,        // The default value will be used only when the component attaching
@@ -33,9 +34,21 @@ cc.Class({
 
     // onLoad () {},
 
-    start () {
+    start() {
 
     },
 
-    // update (dt) {},
+    update() {
+        this.appear_hidden()
+    },
+
+    /*
+    * 自定义函数
+    * */
+
+    //黑洞反复出现消失
+    appear_hidden: function () {
+        let backHoleOpacity =Math.floor(Math.random()*224+1);
+        this.node._children[1].children[1].opacity = backHoleOpacity;
+    }
 });
