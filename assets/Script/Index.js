@@ -48,6 +48,6 @@ cc.Class({
 
     //黑洞反复出现消失
     appear_hidden: function () {
-        this.node._children[1].children[1].opacity = Math.floor(Math.random() * 224 + 1);
+        this.node._children[0]._children[1].opacity = Math.floor(Math.random() * 224 + 1);
     }
 });
