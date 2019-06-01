@@ -12,6 +12,10 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+        blackHole: {
+            default: null,
+            type: cc.node
+        }
         // foo: {
         //     // ATTRIBUTES:
         //     default: null,        // The default value will be used only when the component attaching
@@ -31,11 +35,31 @@ cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {},
+    onLoad() {
+        cc.log('游戏开始！');
+        // cc.systemEvent.on(cc.systemEvent.EventType.KEY_DOWN,this.onKeyDown(),this)
+    },
 
-    start () {
+    start() {
 
     },
 
     // update (dt) {},
+//    以下位置为自定义函数
+    onKeyDown(event){
+
+    },
+
+    turnUp() {
+
+    },
+    turnDown() {
+
+    },
+    turnLeft() {
+
+    },
+    turnRight() {
+
+    }
 });
